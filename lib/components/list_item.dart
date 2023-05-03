@@ -64,7 +64,6 @@ class ListItem extends StatelessWidget {
           )
         ],
       ),
-
     )   : Container(
       height: 100,
       color: color,
@@ -126,7 +125,8 @@ class PhraseItem extends StatelessWidget {
       {Key? key,
 
         required this.color,
-        required this.itemType, required this.phrase})
+        required this.itemType,
+        required this.phrase})
       : super(key: key);
 
   final Item phrase;
@@ -136,6 +136,7 @@ class PhraseItem extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
+      width: double.infinity,
       height: 100,
       color: color,
       child: Row(
@@ -150,7 +151,7 @@ class PhraseItem extends StatelessWidget {
                   phrase.jpName ,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: 12,
                   ),
                 ),
                 Text(
