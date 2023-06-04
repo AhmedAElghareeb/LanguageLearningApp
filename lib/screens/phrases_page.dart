@@ -64,10 +64,13 @@ class PhrasesPage extends StatelessWidget
         itemCount: phrases.length,
         itemBuilder: (context, index)
         {
-          return PhraseItem(
-            itemType: "phrases",
-            phrase: phrases[index],
-            color: Color(0xff50ADC7),
+          return Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: PhraseItem(
+              itemType: "phrases",
+              phrase: phrases[index],
+              color: Color(0xff50ADC7),
+            ),
           );
         },
       ),

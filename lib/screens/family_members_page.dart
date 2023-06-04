@@ -78,10 +78,13 @@ class FamilyMembersPage extends StatelessWidget
       body: ListView.builder(
         itemCount: familyMembers.length,
         itemBuilder: (context, index) {
-          return ListItem(
-            item: familyMembers[index],
-            color: Color(0xff558B37),
-            itemType: 'family_members',
+          return Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: ListItem(
+              item: familyMembers[index],
+              color: Color(0xff558B37),
+              itemType: 'family_members',
+            ),
           );
         },
       ),

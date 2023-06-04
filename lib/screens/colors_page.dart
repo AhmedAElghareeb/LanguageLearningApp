@@ -55,10 +55,13 @@ class ColorsPage extends StatelessWidget
         itemCount: colors.length,
         itemBuilder: (context, index)
         {
-          return ListItem(
-            itemType: "colors",
-            item: colors[index],
-            color: Color(0xff79359F),
+          return Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: ListItem(
+              itemType: "colors",
+              item: colors[index],
+              color: Color(0xff79359F),
+            ),
           );
         },
       ),

@@ -30,10 +30,13 @@ class NumbersPage extends StatelessWidget
         itemCount: numbers.length,
         itemBuilder: (context, index)
         {
-          return ListItem(
-            itemType: "numbers",
-            item: numbers[index],
-            color: Color(0xffEF9235),
+          return Padding(
+            padding: const EdgeInsets.all(7.0),
+            child: ListItem(
+              itemType: "numbers",
+              item: numbers[index],
+              color: Color(0xffEF9235),
+            ),
           );
         },
       ),

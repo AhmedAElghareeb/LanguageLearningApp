@@ -15,50 +15,62 @@ class Home extends StatelessWidget
       appBar: AppBar(
         backgroundColor: Color(0xff46322B),
         title: Text(
-          "Toku App",
+          "Language Learning App",
         ),
       ),
-      body: Column(
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        physics: BouncingScrollPhysics(),
         children: [
-          Category(
-            text: "Numbers",
-            color: Color(0xffEF9235),
-            onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NumbersPage()));
-            },
-          ),
-          Category(
-            text: "FamilyMembers",
-            color: Color(0xff558B37),
-            onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FamilyMembersPage()));
-            },
-          ),
-          Category(
-            text: "Colors",
-            color: Color(0xff79359F),
-            onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ColorsPage()));
-            },
-          ),
-          Category(
-            text: "Phrases",
-            color: Color(0xff50ADC7),
-            onTap: (){
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => PhrasesPage()));
-            },
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                "assets/logo.jpeg",
+                width: 200,
+                height: 200,
+              ),
+              Category(
+                text: "Numbers",
+                color: Color(0xffEF9235),
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NumbersPage()));
+                },
+              ),
+              Category(
+                text: "FamilyMembers",
+                color: Color(0xff558B37),
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => FamilyMembersPage()));
+                },
+              ),
+              Category(
+                text: "Colors",
+                color: Color(0xff79359F),
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ColorsPage()));
+                },
+              ),
+              Category(
+                text: "Phrases",
+                color: Color(0xff50ADC7),
+                onTap: (){
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PhrasesPage()));
+                },
+              ),
+            ],
           ),
         ],
       ),
