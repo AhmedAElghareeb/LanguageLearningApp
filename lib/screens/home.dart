@@ -27,7 +27,7 @@ class Home extends StatelessWidget
             children: [
               Image.asset(
                 "assets/logo.jpeg",
-                width: 200,
+                width: 300,
                 height: 200,
               ),
               Category(
